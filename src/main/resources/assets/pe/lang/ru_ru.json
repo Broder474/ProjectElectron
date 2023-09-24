@@ -1,5 +1,5 @@
 {
     "power.group.power_producers": "Производители электричества",
-    "item.pe.handle_engine.tooltip": "Производит кинетическую энергию при нажатии",
+    "item.pe.handle_engine.tooltip": "Генерирует 1 Втч за каждый клик",
     "item.pe.handle_engine": "Ручной кинетический генератор"
 }

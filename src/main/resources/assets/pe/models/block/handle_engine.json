@@ -1,7 +1,7 @@
  {
      "parent": "minecraft:block/cube_column",
      "textures": {
-         "end": "pe:block/handle_engine",
-         "side": "pe:block/handle_engine"
+         "end": "pe:block/handle_engine_end",
+         "side": "pe:block/handle_engine_side"
      }
  }

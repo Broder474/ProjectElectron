@@ -1,5 +1,5 @@
 {
     "pe.group.power_producers": "Power producers",
-     "item.pe.handle_engine.tooltip": "Produces kinetic power while clicking",
+     "item.pe.handle_engine.tooltip": "Produces 1 Wh every click",
      "item.pe.handle_engine": "Manual kinetic generator"
 }

@@ -1,11 +1,12 @@
 package com.example;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -21,7 +22,7 @@ import org.slf4j.LoggerFactory;
 		// That way, it's clear which mod wrote info, warnings, and errors.
 		public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 		public static final String MOD_ID = "pe";
-		public final Item handle_engine = new HandleEngine(new FabricItemSettings());
+		public final Item HANDLE_ENGINE_ITEM = new HandleEngineItem(new FabricItemSettings());
 		public static final RegistryKey<ItemGroup> POWER_PRODUCERS = RegistryKey.of(RegistryKeys.ITEM_GROUP,
 				new Identifier(MOD_ID, "power_producers"));
 
@@ -33,15 +34,15 @@ import org.slf4j.LoggerFactory;
 
 			// register custom block
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "handle_engine"),
-					handle_engine);
+					HANDLE_ENGINE_ITEM);
 			// register custom item group
 			Registry.register(Registries.ITEM_GROUP, POWER_PRODUCERS, FabricItemGroup.builder()
-					.icon(() -> new ItemStack(handle_engine))
+					.icon(() -> new ItemStack(HANDLE_ENGINE_ITEM))
 					.displayName(Text.translatable("pe.group.power_producers"))
 					.build());
 
 			ItemGroupEvents.modifyEntriesEvent(POWER_PRODUCERS).register(entry -> {
-				entry.add(handle_engine);
+				entry.add(HANDLE_ENGINE_ITEM);
 			});
 
 		}
