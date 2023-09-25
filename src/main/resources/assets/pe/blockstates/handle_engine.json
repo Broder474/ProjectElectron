@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "pe:block/handle_engine"
+    }
+  }
+}

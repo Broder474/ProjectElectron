@@ -1,7 +1,8 @@
 package com.example;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -10,9 +11,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HandleEngineItem extends Item {
-    public HandleEngineItem(Settings settings) {
-        super(settings);
+public class HandleEngineItem extends BlockItem {
+    public HandleEngineItem(Block block, Settings settings) {
+        super(block, settings);
 
     }
 
