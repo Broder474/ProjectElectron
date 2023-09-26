@@ -23,17 +23,14 @@ import org.slf4j.LoggerFactory;
 		public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 		public static final String MOD_ID = "pe";
 		public static final Block HANDLE_ENGINE_BLOCK = new HandleEngineBlock(FabricBlockSettings.create()
-				.strength(4.0f));
+				.strength(4.0f)
+				);
 		public final BlockItem HANDLE_ENGINE_ITEM = new HandleEngineItem(HANDLE_ENGINE_BLOCK, new FabricItemSettings());
 		public static final RegistryKey<ItemGroup> POWER_PRODUCERS = RegistryKey.of(RegistryKeys.ITEM_GROUP,
 				new Identifier(MOD_ID, "power_producers"));
 
 		@Override
 		public void onInitialize() {
-			// This code runs as soon as Minecraft is in a mod-load-ready state.
-			// However, some things (like resources) may still be uninitialized.
-			// Proceed with mild caution.
-
 			// register custom block
 			Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "handle_engine"), HANDLE_ENGINE_BLOCK);
 			Registry.register(Registries.ITEM, new Identifier(MOD_ID, "handle_engine"), HANDLE_ENGINE_ITEM);
