@@ -1,4 +1,4 @@
-package com.example;
+package com.electron;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -20,7 +20,7 @@ public class HandleEngineBlock extends Block {
 
     public HandleEngineBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(ACCUMULATED_POWER, 0));
+        setDefaultState(getDefaultState().with(ACCUMULATED_POWER, 10));
     }
 
     @Override

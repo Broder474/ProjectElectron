@@ -1,4 +1,4 @@
-package com.example;
+package com.electron;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.item.TooltipContext;

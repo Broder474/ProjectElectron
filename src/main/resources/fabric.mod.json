@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ProjectElectron"
+			"core.ProjectElectron"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.electron.ExampleModClient"
 		]
 	},
 	"mixins": [
